@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>jQuery.mmenu demo</title>
+
+		<link type="text/css" rel="stylesheet" href="../css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.css" />
+		<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.dragopen.css" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/morpheus_style.css">
+		<link rel="stylesheet" type="text/css" href="../css/main_restaurant.css">
+		<!-- for the one page layout -->
+		<style type="text/css">
+			#intro,
+			#first,
+			#second,
+			#third
+			{
+				height: 400px;
+			}
+			#intro
+			{
+				padding-top: 0;
+			}
+			#first,
+			#second,
+			#third
+			{
+				border-top: 1px solid #ccc;
+				padding-top: 150px;
+			}
+		</style>
+		
+		<!-- for the fixed header -->
+		<style type="text/css">
+			.header,
+			.footer
+			{
+				box-sizing: border-box;
+				width: 100%;
+				position: fixed;
+			}
+			.header
+			{
+				top: 0;
+			}
+			.footer
+			{
+				bottom: 0;
+			}
+		</style>
+		
+		<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+		<script type="text/javascript" src="../js/ui/jquery.mmenu.min.js"></script>
+		<script type="text/javascript" src="../js/ui/jquery.mmenu.dragopen.min.js"></script>
+		<script type="text/javascript" src="../js/ui/jquery.mmenu.fixedelements.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var $menu = $('nav#menu'),
+					$html = $('html, body');
+
+				$menu.mmenu({
+					dragOpen: true
+				});
+
+				var $anchor = false;
+				$menu.find( 'li > a' ).on(
+					'click',
+					function( e )
+					{
+						$anchor = $(this);
+					}
+				);
+
+				var api = $menu.data( 'mmenu' );
+				api.bind( 'closed',
+					function()
+					{
+						if ( $anchor )
+						{
+							var href = $anchor.attr( 'href' );
+							$anchor = false;
+
+							//	if the clicked link is linked to an anchor, scroll the page to that anchor 
+							if ( href.slice( 0, 1 ) == '#' )
+							{
+								$html.animate({
+									scrollTop: $( href ).offset().top
+								});	
+							}
+						}
+					}
+				);
+			});
+		</script>
+	</head>
+<body class="main">
+	<div class="wrapper">
+<!-- 		<div id="page"> -->
+			<div class="header Fixed">
+				<a href="#menu"></a>
+				내가 가줄게
+			</div>
+			<div class="main_tab">
+			<!--메뉴-->
+			<ul class="main_menu">
+				<li><button data-slide-index="0">내 주변식당<em class="badge none" id='newNotice'></em></button></li>
+				<li><button data-slide-index="2">리뷰<em class="badge none" id="eaprvArriveCount"></em></button></li>
+			</ul>
+			<!--슬라이드 애니메이션 영역-->
+			<div class="main_menu_slide">
+				<div class="slide_bg">
+					bg
+					<!--slide_bar style left값으로 지정-->
+					<div class="slide_bar">bar</div>
+				</div>
+			</div>
+			<!--//슬라이드 애니메이션 영역-->
+			<!--//메뉴-->
+		</div>
+		
+		<div class="container scroller">
+		<!-- iscroll_area -->
+
+			<div class="notice_list">
+				<!-- List -->
+				<ul data-instance-class="goDetail">
+					<li>
+							<table>
+								<tr>
+									<td rowspan="3" class="side_img"style="
+									background:url('../img/category/beef.png') no-repeat 50% 50%;background-size:100% 100%;">
+									</td>		
+									<td>가게이름</td>
+								</tr>
+								<tr>
+									<td>지역</td>
+								</tr>
+								<tr>
+									<td>리뷰</td>
+								</tr>
+							</table>
+					</li>
+					<li>
+							<table>
+								<tr>
+									<td rowspan="3" class="side_img"style="
+									background:url('../img/category/beef.png') no-repeat 50% 50%;background-size:100% 100%;">
+									</td>		
+									<td>가게이름</td>
+								</tr>
+								<tr>
+									<td>지역</td>
+								</tr>
+								<tr>
+									<td>리뷰</td>
+								</tr>
+							</table>
+					</li>
+					
+				</ul>
+			</div>
+				<!-- [D:btn]목록이 한페이지 이상인 경우 -->
+			<div class="btn_area"><button type="button" class="btn_more">더보기</button></div>
+
+		<!--// iscroll_area -->
+		</div>
+					
+			<nav id="menu">
+			<div>
+				<div style="width:100%;background:#fff;padding:1em;text-align:left;border-radius:1em;">
+					<img src="../img/mypage/user.png">
+					<span style="font-size:2em;float:right;">wow123</span>
+					
+				</div>
+			<ul>
+					<li><a href="./reserve_category.html"><img src="../img/mypage/phone.png" style="margin-right:1em;">내 예약 현황</a></li>
+					<li><a href="./review_list.html"><img src="../img/mypage/write.png" style="margin-right:1em;">나의 후기</a></li>
+					<li><a href="./reserve_write.html"><img src="../img/mypage/go.png" style="margin-right:1em;">내가 가줄게</a></li>
+					<li><a href="./alram_on.html"><img src="../img/mypage/alram.png" style="margin-right:1em;">알람 설정</a></li>
+				</ul>
+			</div>
+				
+			</nav>
+<!-- 		</div> -->
+		</div>
+	</body>
+</html>

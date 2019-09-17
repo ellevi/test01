@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.notice_list{background-color:#fff;}
+.notice_list ul li{padding:.8rem 1rem;border-bottom:1px solid #D5D5D5;background:url('../img/btn_next.png') no-repeat 98% 50%;background-size:1.5rem;cursor:pointer;}
+.notice_list ul li h2{display:block;width:90%;font-size:1.5rem;color:#000;line-height:5.4;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.notice_list ul li p.date{font-size:1.3rem;color:#29b5d8;}
+.btn_area{display:block;overflow:hidden;width:100%;margin:8px auto;padding:5px 0;text-align:center;}
+
+table td{
+height:3.5em;font-size:1.5em;padding:0;
+}
+
+table td.side_img{
+	width:30%;height:100%;
+}

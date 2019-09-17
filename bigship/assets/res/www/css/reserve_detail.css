@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.reserve_btn{background:#3498DB;color:#fff;font-size:1em;height:2.5em;border-radius:0.3em;}
+.title_div{text-align: center;padding:1.5em;border-bottom:.1rem solid #c6c6c6;margin-bottom:1em;}
+.title_div span{font-size:1.8em;} 
+.writer_title{width:50%;}
+.write_date{width:50%;float:right;text-align:right;}
+table td span{font-size:1em;}

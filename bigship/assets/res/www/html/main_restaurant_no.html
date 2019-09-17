@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<title>GuideKit</title>
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../css/morpheus_style.css">
+
+<link rel="stylesheet" type="text/css" href="../css/main_restaurant.css">
+
+</head>
+<body class="main">
+<div class="wrapper">
+<!-- Header Start -->
+<header class="header">
+			<h1>내가 가줄게</h1>
+			<button class="hbtn pl menu">prev</button>
+		</header>
+
+<div class="main_tab">
+			<!--메뉴-->
+			<ul class="main_menu">
+				<li><button data-slide-index="0">내 주변식당<em class="badge none" id='newNotice'></em></button></li>
+				<li><button data-slide-index="2">리뷰<em class="badge none" id="eaprvArriveCount"></em></button></li>
+			</ul>
+			<!--슬라이드 애니메이션 영역-->
+			<div class="main_menu_slide">
+				<div class="slide_bg">
+					bg
+					<!--slide_bar style left값으로 지정-->
+					<div class="slide_bar">bar</div>
+				</div>
+			</div>
+			<!--//슬라이드 애니메이션 영역-->
+			<!--//메뉴-->
+		</div>
+		<div class="container scroller">
+		<!-- iscroll_area -->
+
+			<div class="notice_list">
+				<!-- List -->
+				<ul data-instance-class="goDetail">
+					<li>
+							<table>
+								<tr>
+									<td rowspan="3" class="side_img"style="
+									background:url('../img/category/beef.png') no-repeat 50% 50%;background-size:100% 100%;">
+									</td>		
+									<td>가게이름</td>
+								</tr>
+								<tr>
+									<td>지역</td>
+								</tr>
+								<tr>
+									<td>리뷰</td>
+								</tr>
+							</table>
+					</li>
+					<li>
+							<table>
+								<tr>
+									<td rowspan="3" class="side_img"style="
+									background:url('../img/category/beef.png') no-repeat 50% 50%;background-size:100% 100%;">
+									</td>		
+									<td>가게이름</td>
+								</tr>
+								<tr>
+									<td>지역</td>
+								</tr>
+								<tr>
+									<td>리뷰</td>
+								</tr>
+							</table>
+					</li>
+					
+				</ul>
+			</div>
+				<!-- [D:btn]목록이 한페이지 이상인 경우 -->
+			<div class="btn_area"><button type="button" class="btn_more">더보기</button></div>
+
+		<!--// iscroll_area -->
+		</div>
+		
+</div>
+
+</body>
+</html>

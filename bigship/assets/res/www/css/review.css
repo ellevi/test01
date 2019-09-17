@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+.review_box {padding:0.5em;margin:1em;border:solid 1px #d3d3d3;}
+.review_box td {padding:0.2em;}
+.review_id {color:#000;font-size:1.5em;}
+.review_table {font-size:1em;}
+.review_box td span{font-size:1.2em;}
+.review_box td a{color:#3DB7CC;}
+.review_box td img{width:100%;height:100%;}
+.like_name{width:50%;float:right;text-align:right;}
+.like_btn{width:50%;}
+
+.review_box_insert {padding:0.5em;margin:0.5em;border:solid 1px #d3d3d3;}
+.insert_table {font-size:1em;color:#000;}
+.insert_table td{padding:0.5em;}
+input{border:solid 1px #d5d5d5;}
+
+.reserve_btn_join {background:#3498DB;color:#fff;font-size:1em;height:2.5em;border-radius:0.3em;width:50%;float:left;}
